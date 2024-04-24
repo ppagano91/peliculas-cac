@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/*configuracion de variables*/
+:root{
+    --main-color: #f3f3f3;
+    --secondary-color: #161516;
+    --third-color: #850f0f;
+    --grosor-negrita :bold;
+}
+
+body{
+    font-family: "Allerta Stencil", sans-serif;
+    background-color: var(--third-color);
+}
+
+header, footer{
+    background-color: rgba(100, 10, 10,0.1);
+    color: var(--main-color);
+}
+
+.links{
+    color: var(--main-color);
+    text-decoration: None;
+}
+
+.links:hover{
+    color: #161516;
+}
+
+.logo:hover{
+    animation: tilt-n-move-shaking 0.25s infinite;
+
+}
+
+.hero-container{
+    background-image: url("../assets/img/hero/hero-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 75vh;
+    color: white;
+}
+
+.blur {
+    backdrop-filter: blur(5px);
+}
+
+.margin-10{
+    margin: 10px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+  }
+
+.button-search{
+border-radius: 25px;
+font-weight: 700;
+border: 2px solid white;
+transition: transform 0.3s, box-shadow 0.3s;
+&:hover {
+    background-color: #9f3647;
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+}
+
+.input-search{
+    border-radius: 25px;
+    font-weight: 700;
+    border: 2px solid white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+  
+.card-movie{
+    height: 100%; /* Establecer la altura de las tarjetas al 100% */
+    width: 100%; /* Establecer el ancho de las tarjetas al 100% */
+    display: flex; /* Utilizar flexbox para alinear contenido verticalmente */
+    flex-direction: column; /* Alinear contenido verticalmente */
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+    /* box-shadow: 15px 15px 50px -5px rgba(255,255,255,0.5); */
+
+    &:hover{
+        box-shadow: 0 0 20px rgba(255,255,255,0.5);
+        transform: scale(0.95);
+    }
+}
+
+.card-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-container{
+    width:25%;
+}
+
+.cards-list{
+    justify-content: space-evenly;
+}
+
+.hr{
+    opacity: 100%;
+    width: 50%;
+    border: 2px solid white;
+}
+
+
