@@ -88,35 +88,88 @@ transition: transform 0.3s, box-shadow 0.3s;
 }
   
 .card-movie{
-    height: 100%; /* Establecer la altura de las tarjetas al 100% */
-    width: 100%; /* Establecer el ancho de las tarjetas al 100% */
-    display: flex; /* Utilizar flexbox para alinear contenido verticalmente */
-    flex-direction: column; /* Alinear contenido verticalmente */
-    transition: transform 1.5s, box-shadow 0.3s;
-    
-    /* box-shadow: 15px 15px 50px -5px rgba(255,255,255,0.5); */
+    position: relative;
+    /* overflow: hidden; */
+
+    height: 100%; 
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    transition: transform 0.5s, box-shadow 1.5s;
 
     &:hover{
         box-shadow: 0 0 20px rgba(255,255,255,0.5);
-        /* transform: scale(0.95); */
-        transform:rotateY(180deg);
-        backdrop-filter: blur(100px);
+        transform: scale(0.95);
+        /* transform: rotateY(180deg); */
     }
 }
+
+.card-movie:hover .card-img-top {
+    filter: blur(0.25rem);
+  }
+
+.card-movie:hover .card-title {
+    visibility: visible;
+    opacity: 1; 
+  }
 
 .card-image{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.card-body-index{
+    /* visibility: "hidden";
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    &:hover{
+        background-color: rgba(30, 10, 10, 0.5);
+    }
+    
     
 }
 
 .card-container{
-    width:25%;
+    width:25%;    
 }
 
 .cards-list{
     justify-content: space-evenly;
+}
+
+.card-title{
+    /* position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color:white;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(30, 10, 10, 0.5);
+    text-align: center;        
+    margin: 0;
+    visibility: hidden;
+    margin: 0;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out; */
+
+    color: white;    
+    padding: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+    
 }
 
 .hr{
@@ -144,12 +197,14 @@ transition: transform 0.3s, box-shadow 0.3s;
     background-size: cover;
 }
 
-.register-form{
+.register-form, .login-form{
     background-color: rgba(42,42,42,0.5);
     transition: transform 0.5s, background-color 0.5s;
     &:hover{
         background-color: rgba(42,42,42,1);
     }
+}
+.login-form{    
 }
 
 
@@ -160,7 +215,7 @@ transition: transform 0.3s, box-shadow 0.3s;
         background:linear-gradient(to right top, #6d6969a7, #6d6969a7),url("../assets/img/images/mario-bg.jpg");
         background-size: cover;
         background-position: center;
-        height: 60vh;
+        /* height: 60vh; */
 
         .detail-image{
             transition: transform 0.5s, box-shadow 0.5s;
@@ -181,6 +236,19 @@ transition: transform 0.3s, box-shadow 0.3s;
             .detail-content-item-value{
                 text-align: end;
             }
+        }
+    }
+    .trailer-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .iframe-container{
+        width: 100%;
+        .iframe-video{            
+            border-radius: 5%;
+            height: 100vh;
         }
     }
 }
