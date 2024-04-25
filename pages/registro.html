@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro | CAC-MOVIES</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="../css/bootstrap-5.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
-<body class="bodyRegistrarse">
+<body class="">
     <header class="header m-1">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid" style="color: white;">
-                <a class="fs-4 links" href="../index.html">
+                <a class="fs-4 links logo" href="../index.html">
                     <i class="fas fa-film" aria-hidden="true"></i>
                     <span>CAC-Movies</span>
                 </a>
@@ -24,13 +25,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0 w-100 justify-content-end">
                     <li class="nav-item">
-                    <a class="nav-link fs-4 links" href="#">Tendencias</a>
+                    <a class="nav-link fs-4 links" href="../index.html#Tendencias">Tendencias</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link fs-4 links" href="#">Contacto</a>
+                      </li>
                     <li class="nav-item">
                     <a class="nav-link fs-4 links" href="./registro.html">Registrarse</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link fs-4 links" href="#">Iniciar Sesión</a>
+                    <a class="nav-link fs-4 links" href="./inicio-sesion.html">Iniciar Sesión</a>
                     </li>
                 </ul>
                 </div>
@@ -38,101 +42,77 @@
             </nav>
     </header>
     <main id="main" class="main">
-        <!-- <section>
-            <form action="" method="get">
-                <h2 class="tituloRegistrarse">Registro</h2>
-                <div>
-                    <input type="text" placeholder="Nombre"  id="nombre" name="nombre">
-                    <div class="error-text"></div>
-                </div>
-                <div>
-                    <input type="text" placeholder="Apellido"  id="apellido" name="apellido">
-                    <div class="error-text"></div>
-                </div>
-                <div>
-                    <input type="email" placeholder="Email"  id="email" name="email">
-                    <div class="error-text"></div>
-                </div>
-                <div>
-                    <input type="password" placeholder="Contraseña"  id="password" name="password">
-                    <div class="error-text"></div>
-                </div>
-                <div>
-                    <input type="date" placeholder="Fecha de Nacimiento (dd/mm/aaaa)"  id="fechaNacimiento" name="fechaNacimiento">
-                    <div class="error-text"></div>
-                </div>
-                <div>
-                    <select name="pais" id="pais">
-                        <option value="">País</option>
-                        <option value="AR">Argentina</option>
-                        <option value="BO">Bolivia</option>
-                        <option value="BR">Brasil</option>
-                        <option value="CH">Chile</option>
-                        <option value="CO">Colombia</option>
-                        <option value="EC">Ecuador</option>
-                        <option value="PY">Paraguay</option>
-                        <option value="PE">Perú</option>
-                        <option value="UY">Uruguay</option>
-                        <option value="VE">Venezuela</option>
-                    </select>
-                    <div class="error-text"></div>
-                </div>
-                <div class="terminos">
-                    <input class="check" type="checkbox" id="terminos">
-                    <label class="textoCheck" for="terminos">Acepto términos y condiciones</label>
-                    <div class="error-text"></div>
-                </div>
-                <div>
-                    <input class="boton" type="submit" value="Registrarse">
-                </div>
-                <div>
-                    <a class="ayuda" href="#">Necesitas ayuda?</a>
-                </div>
-            </form>
-        </section> -->
-        <section class="bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
-            <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-                <div class="container h-100 m-2">
-                    <div class="row d-flex justify-content-center align-items-center h-100">
+        <section class="bg-image">
+            <div class="mask d-flex align-items-center gradient-custom-3">
+                <div class="container" data-aos="fade-right">
+                    <div class="row d-flex align-items-center">
                         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-                            <div class="card" style="border-radius: 15px;">
-                                <div class="card-body p-5">
-                                    <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+                            <div class="card m-2 register-form" style="border-radius: 20px;">
+                                <div class="card-body p-4">
+                                    <h2 class="text-uppercase text-center mb-2">¡Regístrate!</h2>
                                     <form>
-                                        <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
-                                        <label class="form-label" for="form3Example1cg">Your Name</label>
+                                        <div class="form-outline mb-3">
+                                            <input type="text" class="form-control form-control-lg" placeholder="Nombre"/>
+                                            <div class="error-text"></div>
                                         </div>
 
-                                        <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
-                                        <label class="form-label" for="form3Example3cg">Your Email</label>
+                                        <div class="form-outline mb-3">
+                                            <input type="text" class="form-control form-control-lg" placeholder="Apellido"/>
+                                            <div class="error-text"></div>
                                         </div>
 
-                                        <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
-                                        <label class="form-label" for="form3Example4cg">Password</label>
+                                        <div class="form-outline mb-3">
+                                            <input type="date" class="form-control form-control-lg" placeholder="Fecha de Nacimiento (dd/mm/aaaa)"  id="fechaNacimiento" name="fechaNacimiento" >
+                                            <div class="error-text"></div>
                                         </div>
 
-                                        <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
-                                        <label class="form-label" for="form3Example4cdg">Repeat your password</label>
+                                        <div class="form-outline mb-3">
+                                            <input type="email" class="form-control form-control-lg" placeholder="Email"/>
+                                            <div class="error-text"></div>
                                         </div>
 
-                                        <div class="form-check d-flex justify-content-center mb-5">
-                                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
-                                        <label class="form-check-label" for="form2Example3g">
-                                            I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                                        <div class="form-outline mb-3">
+                                            <input type="password" class="form-control form-control-lg" placeholder="Contraseña"/>
+                                            <div class="error-text"></div>
+                                        </div>
+
+                                        <!-- <div class="form-outline mb-3">
+                                            <input type="password" class="form-control form-control-lg" placeholder="Repetir Contraseña"/>
+                                            <div class="error-text"></div>
+                                        </div> -->
+                                            <div class="form-outline">
+                                                <select class="form-control form-control-lg" name="pais" id="pais">
+                                                    <option value="">Seleccionar País</option>
+                                                    <option value="AR">Argentina</option>
+                                                    <option value="BO">Bolivia</option>
+                                                    <option value="BR">Brasil</option>
+                                                    <option value="CH">Chile</option>
+                                                    <option value="CO">Colombia</option>
+                                                    <option value="EC">Ecuador</option>
+                                                    <option value="PY">Paraguay</option>
+                                                    <option value="PE">Perú</option>
+                                                    <option value="UY">Uruguay</option>
+                                                    <option value="VE">Venezuela</option>
+                                                </select>
+                                                <div class="error-text"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-check d-flex justify-content-center mb-3">
+                                        <input class="form-check-input me-2" type="checkbox" value="" id="" />
+                                        <label class="form-check-label text-center" for="">
+                                            Acepto los <a href="#!" class="links"><u>Términos y Condiciones</u></a>
                                         </label>
                                         </div>
 
                                         <div class="d-flex justify-content-center">
                                         <button type="button"
-                                            data-mdb-button-init data-mdb-ripple-init class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                                            class="btn btn-danger btn-block btn-lg gradient-custom-4 text-body">Registrarse</button>
                                         </div>
 
-                                        <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
-                                            class="fw-bold text-body"><u>Login here</u></a></p>
+                                        <p class="text-center mt-2 mb-0">¿Ya tienes una cuenta? 
+                                            <a href="./inicio-sesion.html" class="fw-bold links">Iniciar Sesión</a>
+                                        </p>
 
                                     </form>
 
@@ -145,96 +125,96 @@
         </section>
     </main>
     <footer class="bg-body-tertiary text-center">
-     <!-- Grid container -->
-     <div class="container p-4 pb-0">
-       <!-- Section: Social media -->
-       <section class="mb-4">
-         <!-- Facebook -->
-         <a
-         data-mdb-ripple-init
-           class="btn text-white btn-floating m-1"
-           style="background-color: #3b5998;"
-           href="#!"
-           role="button"
-           ><i class="fab fa-facebook-f"></i
-         ></a>
-   
-         <!-- Twitter -->
-         <a
-           data-mdb-ripple-init
-           class="btn text-white btn-floating m-1"
-           style="background-color: #55acee;"
-           href="#!"
-           role="button"
-           ><i class="fab fa-twitter"></i
-         ></a>
-   
-         <!-- Google -->
-         <a
-           data-mdb-ripple-init
-           class="btn text-white btn-floating m-1"
-           style="background-color: #dd4b39;"
-           href="#!"
-           role="button"
-           ><i class="fab fa-google"></i
-         ></a>
-   
-         <!-- Instagram -->
-         <a
-           data-mdb-ripple-init
-           class="btn text-white btn-floating m-1"
-           style="background-color: #ac2bac;"
-           href="#!"
-           role="button"
-           ><i class="fab fa-instagram"></i
-         ></a>
-   
-         <!-- Linkedin -->
-         <a
-           data-mdb-ripple-init
-           class="btn text-white btn-floating m-1"
-           style="background-color: #0082ca;"
-           href="#!"
-           role="button"
-           ><i class="fab fa-linkedin-in"></i
-         ></a>
-         <!-- Github -->
-         <a
-           data-mdb-ripple-init
-           class="btn text-white btn-floating m-1"
-           style="background-color: #333333;"
-           href="#!"
-           role="button"
-           ><i class="fab fa-github"></i
-         ></a>
-       </section>
-       <!-- Section: Social media -->
-     </div>
-     <!-- Grid container -->
-   
-     
-     <nav>
-         <ul class="listaNav">
-             <ol><a class="linkNav" href="">Términos y condiciones</a></li>
-             <ol><a class="linkNav" href="">Preguntas frecuentes</a></ol>
-             <ol><a class="linkNav" href="">Ayuda</a></ol>
-             <ol><a class="linkNav administradorPeliculas" href="">Administrador Peliculas</a></ol>
-         </ul>
-     </nav>
-     <!-- Copyright -->
-     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-         © 2024 Copyright:
-         <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-       </div>
-       <!-- Copyright -->
-       <a href="#main" class="flechaArriba">
-           <img src="../assets/img/flecha-hacia-arriba.png" alt="ir arriba flecha">
-       </a>
-   </footer>
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+            data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #3b5998;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #55acee;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-twitter"></i
+            ></a>
+      
+            <!-- Google -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #dd4b39;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #ac2bac;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #0082ca;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <!-- Github -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #333333;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        
+        <nav class="nav nav-bar d-flex align-items-center justify-content-center gap-4">
+              <a class="footer-link" href="">Términos y condiciones</a>
+              <a class="footer-link" href="">Preguntas frecuentes</a>
+              <a class="footer-link" href="">Ayuda</a>
+              <a class="footer-link" href="">Administrador Peliculas</a>
+        </nav>
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Copyright:
+            <a class="links" href=""><strong>Patricio Pagano</strong></a>
+          </div>
+          <a href="#main" class="flechaArriba">
+              <img src="../assets/img/flecha-hacia-arriba.png" alt="ir arriba flecha">
+          </a>
+      </footer>
  
- <script src="../css/bootstrap-5.0.2/js/bootstrap.bundle.min.js">
- 
- </script>
+      <script src="../css/bootstrap-5.0.2/js/bootstrap.bundle.min.js">
+
+      </script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+          AOS.init();
+      </script>
    
 </body>
 </html>

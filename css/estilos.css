@@ -25,11 +25,11 @@
 body{
     font-family: "Allerta Stencil", sans-serif;
     background-color: var(--third-color);
+    color: var(--main-color);
 }
 
 header, footer{
     background-color: rgba(100, 10, 10,0.1);
-    color: var(--main-color);
 }
 
 .links{
@@ -132,5 +132,22 @@ transition: transform 0.3s, box-shadow 0.3s;
     color:white;
     &:hover{
         color:black;
+    }
+}
+
+
+/* REGISTRO */
+
+.bg-image{
+    background-image: url('../assets/img/registro/surtido-elementos-cine-sobre-fondo-rojo-espacio-copia_23-2148457848.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.register-form{
+    background-color: rgba(42,42,42,0.5);
+    transition: transform 0.5s, background-color 0.5s;
+    &:hover{
+        background-color: rgba(42,42,42,1);
     }
 }
