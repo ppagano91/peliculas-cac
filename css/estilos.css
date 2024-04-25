@@ -20,6 +20,7 @@
     --secondary-color: #161516;
     --third-color: #850f0f;
     --grosor-negrita :bold;
+    --navbar-color: #f3f3f3;
 }
 
 body{
@@ -31,6 +32,28 @@ body{
 header, footer{
     background-color: rgba(100, 10, 10,0.1);
 }
+
+/* .navbar {
+    background-color: var(--navbar-color);
+    color: #000
+  } */
+  
+  /* .navbar-brand {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+  } */
+  
+  .navbar-dark .navbar-nav .nav-link{
+    color: rgba(255,255,255,1);
+    opacity: 1;
+    &:hover{
+        color: rgba(0,0,0,1);
+
+    }
+  }
+  .navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
 
 .links{
     color: var(--main-color);
