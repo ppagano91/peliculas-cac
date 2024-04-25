@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body class="">
-    <header class="header m-1">
+    <header class="header container-fluid m-1">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid" style="color: white;">
                 <a class="fs-4 links logo" href="../index.html">
@@ -44,9 +44,12 @@
     <main id="main" class="main-detail">
       <section class="detail p-5" data-aos="zoom-in">
         <div class="media container">
-            <div class="d-flex justify-content-center align-items-center gap-5">
+          <div class="row">
+            <div class="col-lg-6 d-flex justify-content-center align-items-center gap-5 mb-4">
               <img class="detail-image" src="../assets/img/images/mario.jpg" alt="Imágen de Portada">
-              <div class="detail-content-text p-4 col-6">
+            </div>
+            <div class="col-lg-6">            
+              <div class="detail-content-text p-4">
                 <h5 class="mt-0">Super Mario Bros</h5>
                 <hr class="hr">
                 <div class="row d-flex align-items-center justify-content-center">
@@ -77,14 +80,17 @@
                   <a class="btn btn-dark w-50">Conocer más</a>
                 </div>
               </div>
-            </div>            
+            </div> 
+          </div>         
         </div>        
       </section>
-      <div class="trailer-container">
-        <h2>Ver trailer</h2>
+      <div class="trailer-container col-lg-6 container p-4">
+        <h2 class="text-center">Ver trailer</h2>
         <hr class="hr">
         <div class="d-flex align-items-center justify-content-center iframe-container">
-          <iframe class="w-50 iframe-video" src="https://www.youtube.com/embed/RjNcTBXTk4I?si=7fnK8NtlxetW0d1R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+          <div class="iframe-wrraper col-lg-4 d-flex w-100">
+            <iframe class="iframe-video" src="https://www.youtube.com/embed/RjNcTBXTk4I?si=7fnK8NtlxetW0d1R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+          </div>
         </div>
       </div>
       
