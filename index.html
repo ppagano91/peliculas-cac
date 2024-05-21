@@ -12,10 +12,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-<header class="header m-1">
+<header class="header m-1 fixed">
     <nav class="navbar navbar-expand-lg navbar-dark" >
         <div class="container-fluid" style="color: white;">
-            <a class="fs-4 links logo" href="../index.html">
+            <a class="fs-4 links logo" href="./index.html">
                 <i class="fas fa-film" aria-hidden="true"></i>
                 <span>CAC-Movies</span>
             </a>
@@ -60,7 +60,7 @@
       </div>
     </section>
 
-    <section class="mt-5 container cards-section" data-aos="fade-up" data-aos-offset="225" data-aos-delay="50" data-aos-duration="500" id="Tendencias">
+    <!-- <section class="mt-5 container cards-section" data-aos="fade-up" data-aos-offset="225" data-aos-delay="50" data-aos-duration="500" id="Tendencias">
       <h2>
         Tendencias
       </h2>
@@ -73,7 +73,7 @@
             <a href="./pages/detalle.html" style="height: 100%">
               <img src="./assets/img/cards/the_lion_king.jpg" class="card-img-top card-image" alt="...">
               <div class="card-body card-body-index">
-                <h5 class="card-title">El Rey León</h5>                
+                <h5 class="card-title">El Rey León</h5>
               </div>
             </a>
           </div>
@@ -145,8 +145,27 @@
             </div>
         </div>        
       </div>
-      </section>
+      <div class="">
+        <button id="botonAnterior" class="btn btn-dark">Anterior</button>  
+        <button id="botonSiguiente" class="btn btn-dark">Siguiente</button>
+      </div>
+    </section> -->
+
+    <section class="mt-5 container cards-section" data-aos="fade-up" data-aos-offset="225" data-aos-delay="50" data-aos-duration="500" id="tendencias">
+      <h2>
+        Tendencias
+      </h2>
+      <hr class="hr">
+      <div class="d-flex justify-content-center align-items-center m-2 gap-2">
+        <button id="botonAnterior" class="btn btn-dark">Anterior</button>
+        <span id="pageNumber">Página: 1</span> 
+        <button id="botonSiguiente" class="btn btn-dark">Siguiente</button>
+      </div>
+      <div class="row d-flex cards-list gap-4" id="tendenciasContainer">
+        <!-- Películas de la API -->
+      </div>
       
+    </section>
     </main>
    <footer class="bg-body-tertiary text-center">
     <div class="container p-4 pb-0">
@@ -239,6 +258,6 @@
 <script>
     AOS.init();
 </script>
-   
+<script src="js/index.js"></script>
 </body>
 </html>
