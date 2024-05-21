@@ -50,35 +50,35 @@
                             <div class="card m-2 register-form" style="border-radius: 20px;">
                                 <div class="card-body p-4">
                                     <h2 class="text-uppercase text-center mb-2">¡Regístrate!</h2>
-                                    <form>
+                                    <form class="" id="registerForm" novalidate>
                                         <div class="form-outline mb-3">
-                                            <input type="text" class="form-control form-control-lg" placeholder="Nombre"/>
-                                            <div class="error-text"></div>
+                                            <input type="text" class="form-control form-control-lg" placeholder="Nombre" id="nombre"/>
+                                            <div id="nombreError" class="error-message"></div>
                                         </div>
 
                                         <div class="form-outline mb-3">
-                                            <input type="text" class="form-control form-control-lg" placeholder="Apellido"/>
-                                            <div class="error-text"></div>
+                                            <input type="text" class="form-control form-control-lg" placeholder="Apellido" id="apellido"/>
+                                            <div id="apellidoError" class="error-message"></div>
                                         </div>
 
                                         <div class="form-outline mb-3">
-                                            <input type="date" class="form-control form-control-lg" placeholder="Fecha de Nacimiento (dd/mm/aaaa)"  id="fechaNacimiento" name="fechaNacimiento" >
-                                            <div class="error-text"></div>
+                                            <input type="date" class="form-control form-control-lg" placeholder="Fecha de Nacimiento (dd/mm/aaaa)"  id="fechaNacimiento" name="fechaNacimiento">
+                                            <div id="fechaNacimientoError" class="error-message"></div>
                                         </div>
 
                                         <div class="form-outline mb-3">
-                                            <input type="email" class="form-control form-control-lg" placeholder="Email"/>
-                                            <div class="error-text"></div>
+                                            <input type="email" class="form-control form-control-lg" placeholder="Email" id="email"/>
+                                            <div id="emailError" class="error-message"></div>
                                         </div>
 
                                         <div class="form-outline mb-3">
-                                            <input type="password" class="form-control form-control-lg" placeholder="Contraseña"/>
-                                            <div class="error-text"></div>
+                                            <input type="password" class="form-control form-control-lg" placeholder="Contraseña" id="password"/>
+                                            <div id="passwordError" class="error-message"></div>
                                         </div>
 
                                         <!-- <div class="form-outline mb-3">
                                             <input type="password" class="form-control form-control-lg" placeholder="Repetir Contraseña"/>
-                                            <div class="error-text"></div>
+                                            <div class="error-message"></div>
                                         </div> -->
                                             <div class="form-outline">
                                                 <select class="form-control form-control-lg" name="pais" id="pais">
@@ -94,20 +94,24 @@
                                                     <option value="UY">Uruguay</option>
                                                     <option value="VE">Venezuela</option>
                                                 </select>
-                                                <div class="error-text"></div>
+                                                <div id="paisError" class="error-message"></div>
                                             </div>
                                         </div>
 
                                         <div class="form-check d-flex justify-content-center mb-3">
-                                        <input class="form-check-input me-2" type="checkbox" value="" id="" />
+                                        <input class="form-check-input me-2" type="checkbox" value="" id="terminosCondiciones"/>
                                         <label class="form-check-label text-center" for="">
                                             Acepto los <a href="#!" class="links"><u>Términos y Condiciones</u></a>
                                         </label>
                                         </div>
+                                    <div id="terminosCondicionesError" class="error-message d-flex justify-content-center mb-3"></div>
 
                                         <div class="d-flex justify-content-center">
-                                        <button type="button"
-                                            class="btn btn-danger btn-block btn-lg gradient-custom-4 text-body">Registrarse</button>
+                                        <button
+                                            type="submit"
+                                            class="btn btn-danger btn-block btn-lg gradient-custom-4 text-body"
+                                            id="btnSubmit"
+                                            >Registrarse</button>
                                         </div>
 
                                         <p class="text-center mt-2 mb-0">¿Ya tienes una cuenta? 
@@ -215,6 +219,7 @@
       <script>
           AOS.init();
       </script>
+      <script src="../js/register.js"></script>
    
 </body>
 </html>
