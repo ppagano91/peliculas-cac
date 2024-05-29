@@ -55,7 +55,11 @@ function validForm(submit=false) {
         if (isValidLogin && submit){
             alert("Hola! Te has logeado correctamente")
             form.reset()
+<<<<<<< HEAD
             window.location.href = '../index.html';
+=======
+            window.location.href = './';
+>>>>>>> a48e9bd8d9368577088324116ca63c075a7274bf
         }
 }
 
