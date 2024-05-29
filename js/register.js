@@ -102,7 +102,7 @@ function validForm(submit=false) {
         if(submit){
             alert(`Hola ${nombre}! Te has registrado correctamente`)
             form.reset()
-            window.location.href = '/pages/inicio-sesion.html';
+            window.location.href = './pages/inicio-sesion.html';
         }
     }
 }
