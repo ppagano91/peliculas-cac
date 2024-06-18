@@ -33,27 +33,18 @@ header, footer{
     background-color: rgba(100, 10, 10,0.1);
 }
 
-/* .navbar {
-    background-color: var(--navbar-color);
-    color: #000
-  } */
-  
-  /* .navbar-brand {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-  } */
-  
-  .navbar-dark .navbar-nav .nav-link{
+.navbar-dark .navbar-nav .nav-link{
     color: rgba(255,255,255,1);
     opacity: 1;
     &:hover{
         color: rgba(0,0,0,1);
 
     }
-  }
-  .navbar-dark .navbar-toggler-icon {
+}
+
+.navbar-dark .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  }
+}
 
 .links{
     color: var(--main-color);
@@ -142,11 +133,6 @@ transition: transform 0.3s, box-shadow 0.3s;
     object-fit: cover;
 }
 .card-body-index{
-    /* visibility: "hidden";
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    margin: 0 auto; */
     position: absolute;
     top: 0;
     left: 0;
@@ -158,9 +144,7 @@ transition: transform 0.3s, box-shadow 0.3s;
     margin: 0;
     &:hover{
         background-color: rgba(30, 10, 10, 0.5);
-    }
-    
-    
+    }    
 }
 
 .card-container{
@@ -172,21 +156,6 @@ transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card-title{
-    /* position: absolute;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    color:white;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(30, 10, 10, 0.5);
-    text-align: center;        
-    margin: 0;
-    visibility: hidden;
-    margin: 0;
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out; */
-
     color: white;    
     padding: 0.5rem;
     opacity: 0;
@@ -199,9 +168,8 @@ transition: transform 0.3s, box-shadow 0.3s;
     opacity: 100%;
     width: 50%;
     border: 2px solid white;
+    margin: 30px auto;
 }
-
-
 
 .footer-link{
     text-decoration: none;
@@ -211,8 +179,7 @@ transition: transform 0.3s, box-shadow 0.3s;
     }
 }
 
-
-/* REGISTRO */
+/* REGISTRO, LOGIN Y ADMINISTRADOR DE PELICULAS */
 
 .bg-image{
     background-image: url('../assets/img/registro/surtido-elementos-cine-sobre-fondo-rojo-espacio-copia_23-2148457848.jpg');
@@ -220,14 +187,59 @@ transition: transform 0.3s, box-shadow 0.3s;
     background-size: cover;
 }
 
-.register-form, .login-form{
+.register-form, .login-form, .admin-form{
     background-color: rgba(42,42,42,0.5);
     transition: transform 0.5s, background-color 0.5s;
     &:hover{
         background-color: rgba(42,42,42,1);
     }
 }
-.login-form{    
+
+@media screen and (max-width: 992px){
+    .alineation{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 993px){
+    .alineation{
+        flex-direction: row;
+    }
+}
+
+#btn-add-movie{
+    margin-top: 20px;
+}
+
+/* LISTADO DE PELICULAS EN ADMINISTRADOR */
+.table{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.colTitle, .colGender, .colImg, .colTitle {
+    padding: 5px;
+}
+
+.colTitle {
+    width: 40%;
+}
+
+.colGender {
+    width: 10%;
+}
+
+.colImg {
+    width: 30%
+}
+
+.colActions {
+    width: 20%;
+}
+
+.imgTable {
+    max-width: 200px;
+    max-height: 350px;
 }
 
 
@@ -268,10 +280,6 @@ transition: transform 0.3s, box-shadow 0.3s;
         justify-content: center;
         padding: 2rem;
     }
-
-    .iframe-wrapper {
-    }
-
     .iframe-container{
         width: 100%;
         .iframe-video{
