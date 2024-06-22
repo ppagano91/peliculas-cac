@@ -93,3 +93,14 @@ botonSiguiente.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     cargarPeliculasTendencia();
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const arrow = document.querySelector('.flecha');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 500) {
+            arrow.classList.add('visible');
+        } else {
+            arrow.classList.remove('visible');
+        }
+    });
+});
