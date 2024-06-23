@@ -51,7 +51,7 @@
                                 <div class="card-body p-12">
                                     <h2 class="text-uppercase mb-12">Gestión de películas</h2>
                                     <h6 class="mb-12">En esta sección podrás cargar nuevas películas al portal</h6>
-                                    <form class="" id="adminForm" novalidate>
+                                    <form class="" id="adminForm" method="post" enctype="multipart/form-data" novalidate>
                                         <div class="d-flex justify-content-around gap-1 alineation align-items-center p-2">
                                             <div class="form-outline col-lg-4 col-sm-6 col-md-9">
                                                 <label>Título</label>
@@ -73,7 +73,7 @@
 
                                             <div class="form-outline col-lg-2 col-sm-6 col-md-9">
                                                 <label>Duración</label>
-                                                <input type="text" class="form-control form-control-lg" id="duracion"/>
+                                                <input type="text" class="form-control form-control-lg" id="duracion" placeholder="2h 33m"/>
                                                 <div id="duracionError" class="error-message"></div>
                                             </div>
                                         </div>
@@ -125,7 +125,7 @@
         <section>
             <hr class="hr">
             <div class="">
-                <table class="table table-dark table-hover">
+                <table class="table table-dark table-striped table-hover">
                     <thead>
                     <tr>
                         <th scope="col" class="colTitle">Título</th>
@@ -156,69 +156,39 @@
           <!-- Section: Social media -->
           <section class="mb-4">
             <!-- Facebook -->
-            <a
-            data-mdb-ripple-init
-              class="btn text-white btn-floating m-1"
-              style="background-color: #3b5998;"
-              href="#!"
-              role="button"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
+            <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="#!" role="button">
+                <i class="fab fa-facebook-f"></i>
+            </a>
       
             <!-- Twitter -->
-            <a
-              data-mdb-ripple-init
-              class="btn text-white btn-floating m-1"
-              style="background-color: #55acee;"
-              href="#!"
-              role="button"
-              ><i class="fab fa-twitter"></i
-            ></a>
+            <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="#!" role="button">
+                <i class="fab fa-twitter"></i>
+            </a>
       
             <!-- Google -->
-            <a
-              data-mdb-ripple-init
-              class="btn text-white btn-floating m-1"
-              style="background-color: #dd4b39;"
-              href="#!"
-              role="button"
-              ><i class="fab fa-google"></i
-            ></a>
+            <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button">
+                <i class="fab fa-google"></i>
+            </a>
       
             <!-- Instagram -->
-            <a
-              data-mdb-ripple-init
-              class="btn text-white btn-floating m-1"
-              style="background-color: #ac2bac;"
-              href="#!"
-              role="button"
-              ><i class="fab fa-instagram"></i
-            ></a>
+            <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button">
+                <i class="fab fa-instagram"></i>
+            </a>
       
             <!-- Linkedin -->
-            <a
-              data-mdb-ripple-init
-              class="btn text-white btn-floating m-1"
-              style="background-color: #0082ca;"
-              href="#!"
-              role="button"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
+            <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="#!" role="button">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
             <!-- Github -->
-            <a
-              data-mdb-ripple-init
-              class="btn text-white btn-floating m-1"
-              style="background-color: #333333;"
-              href="#!"
-              role="button"
-              ><i class="fab fa-github"></i
-            ></a>
+            <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #333333;" href="#!" role="button">
+                <i class="fab fa-github"></i>
+            </a>
           </section>
           <!-- Section: Social media -->
         </div>
         <!-- Grid container -->
-      
-        
+              
         <nav class="nav nav-bar d-flex align-items-center justify-content-center gap-4">
               <a class="footer-link" href="#">Términos y condiciones</a>
               <a class="footer-link" href="#">Preguntas frecuentes</a>
@@ -229,12 +199,11 @@
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
             © 2024 Copyright:
             <a class="links" href=""><strong>Patricio Pagano</strong></a>
-          </div>
+        </div>
         <a href="#main" class="flecha">
             <img src="../assets/img/flecha-hacia-arriba.png" alt="flecha para ir hacia arriba">
-        </a>    
-      </footer>
- 
+        </a>
+    </footer>
       <script src="../css/bootstrap-5.0.2/js/bootstrap.bundle.min.js">
 
       </script>

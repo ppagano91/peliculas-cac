@@ -172,7 +172,7 @@ const listarPeliculas = () => {
         const gender = document.createElement('td');
         gender.textContent = "Aventura, comedia";
         const imgMovie = document.createElement('img');
-        imgMovie.classList.add('imgTable');
+        imgMovie.classList.add('imgTable', 'img-fluid', 'img-thumbnail');
         imgMovie.src = '../assets/img/images/mario.jpg';
         imgMovie.alt = title.textContent;
         imgMovie.loading = 'lazy';
