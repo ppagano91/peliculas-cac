@@ -20,22 +20,9 @@ const isValidRelease = () => {
         return false;
     }
     const date = release.split("-");
-    const day = date[2];
-    const month = date[1];
     const year = date[0];
-    const actualYear = new Date().getFullYear();
-    const monthDays = new Date(year, month, 0).getDate();
-    // compruebo que los días no superen a los del mes correspondiente
-    if (day > monthDays)
-    {
-        return false;
-    };
-    // compruebo que el mes sea válido
-    if (month == 0 || month > 12) {
-        return false;
-    }
-    // compruebo que el año sea menor al actual
-    if ( year > actualYear) {
+    // compruebo que el año sea mayor que el mostrado en el placehoder
+    if ( year < 1900) {
         return false;
     }
     return true;
@@ -160,13 +147,14 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-
 /*carga datos de películas a la tabla
 Se va a modificar con el consumo de la API */
 const tbody = document.getElementById('bodyTable');
 
 const listarPeliculas = () => {
     for (let movie = 0; movie < 5; movie++){
+        const movieId = document.createElement('td');
+        movieId.textContent = movie + 1;
         const title = document.createElement('td');
         title.textContent = "Super Mario Bros";
         const gender = document.createElement('td');
@@ -195,6 +183,7 @@ const listarPeliculas = () => {
         const actions = document.createElement('td');
         actions.appendChild(btnDiv);
         const dataRow = document.createElement('tr');
+        dataRow.appendChild(movieId);
         dataRow.appendChild(title);
         dataRow.appendChild(gender);
         dataRow.appendChild(imgTd);
