@@ -147,7 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-
 /*carga datos de películas a la tabla
 Se va a modificar con el consumo de la API */
 const tbody = document.getElementById('bodyTable');
