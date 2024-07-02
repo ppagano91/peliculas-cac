@@ -151,18 +151,28 @@ document.addEventListener("DOMContentLoaded", () => {
 Se va a modificar con el consumo de la API */
 const tbody = document.getElementById('bodyTable');
 
-const listarPeliculas = () => {
-    for (let movie = 0; movie < 5; movie++){
+const listarPeliculas = async () => {
+    const response = await fetch(`http://localhost:8080/api/peliculas`,
+        {
+            method: 'GET',
+            headers: {
+                accept: 'application/json'
+            }
+        }
+    );
+    const movies = await response.json();
+
+    movies.forEach(movie => {
         const movieId = document.createElement('td');
-        movieId.textContent = movie + 1;
+        movieId.textContent = movie.idPelicula;
         const title = document.createElement('td');
-        title.textContent = "Super Mario Bros";
+        title.textContent = movie.titulo;
         const gender = document.createElement('td');
-        gender.textContent = "Aventura, comedia";
+        gender.textContent = movie.genero;
         const imgMovie = document.createElement('img');
         imgMovie.classList.add('imgTable', 'img-fluid', 'img-thumbnail');
-        imgMovie.src = '../assets/img/images/mario.jpg';
-        imgMovie.alt = title.textContent;
+        imgMovie.src = `../assets/img/images/${movie.imagen}`;
+        imgMovie.alt = `Imagen de película ${movie.titulo}`;
         imgMovie.loading = 'lazy';
         const imgTd = document.createElement('td');
         imgTd.appendChild(imgMovie);
@@ -190,7 +200,7 @@ const listarPeliculas = () => {
         dataRow.appendChild(actions);
 
         tbody.appendChild(dataRow);
-    }
+    })
 }
 
 document.addEventListener("DOMContentLoaded", () => {listarPeliculas()});
