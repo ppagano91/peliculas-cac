@@ -56,11 +56,11 @@ function validForm(submit=false) {
 
     if (!isValidRelease()) {
         displayErrorMessage("fechaLanzamientoError", "Por favor ingrese una fecha válida.");
-        document.getElementById("fechaLanzamiento").classList.add('isInvalid');
-        isValid = false;
+        document.getElementById("fechaLanzamiento").classList.add('is-invalid');
+        isValidRegistration = false;
     } else {
-        document.getElementById("fechaLanzamiento").classList.remove('isInvalid');
-        document.getElementById("fechaLanzamiento").classList.add('isValid');
+        document.getElementById("fechaLanzamiento").classList.remove('is-invalid');
+        document.getElementById("fechaLanzamiento").classList.add('is-valid');
     }
 
     if (genero==""){
@@ -115,11 +115,11 @@ function validForm(submit=false) {
 
     if (!isValidImg()) {
         displayErrorMessage("imagenError", "El archivo debe ser png, jpg o jpeg.");
-        document.getElementById("imagen").classList.add('isInvalid');
-        isValid = false;
+        document.getElementById("imagen").classList.add('is-invalid');
+        isValidRegistration = false;
     } else {
-        document.getElementById("imagen").classList.remove('isInvalid');
-        document.getElementById("imagen").classList.add('isValid');
+        document.getElementById("imagen").classList.remove('is-invalid');
+        document.getElementById("imagen").classList.add('is-valid');
     }
 
     if (isValidRegistration){
