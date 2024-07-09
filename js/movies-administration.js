@@ -203,8 +203,6 @@ const listarPeliculas = async () => {
     })
 }
 
-document.addEventListener("DOMContentLoaded", () => {listarPeliculas()});
-
 document.addEventListener("DOMContentLoaded", function() {
     const arrow = document.querySelector('.flecha');
     window.addEventListener('scroll', function() {
@@ -215,3 +213,60 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {listarPeliculas()});
+
+document.addEventListener("DOMContentLoaded", async () => {
+    console.log("POST")
+    formNuevaPelicula = document.getElementById("adminForm");
+
+    formNuevaPelicula.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(formNuevaPelicula);
+
+        const titulo = formData.get("titulo");
+        const lanzamiento = formData.get("fechaLanzamiento");
+        const genero = formData.get("genero");
+        const duracion = formData.get("duracion");
+        const director = formData.get("director");
+        const reparto = formData.get("reparto");
+        const sinposis = formData.get("sinposis");
+
+        if ( titulo === "" || lanzamiento === "" || genero === "" || duracion === "" || director === "" || reparto === "" || sinposis === ""){
+            alert("Todos los campos son obligatorios");
+            return;
+        }
+
+        const nombreImagen = imagen.name;
+
+        const options = {
+            methid: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                titulo: titulo,
+                lanzamiento: lanzamiento,
+                genero: genero,
+                duracion: duracion,
+                director: director,
+                reparto: reparto,
+                sinposis: sinposis
+            })
+        }
+
+        const response = await fetch("http://localhost:8080/api/peliculas", options);
+
+        const data = await response.json();
+
+        if (response.status === 201){
+            alert("Pelicula agregada correctamente");
+
+            formNuevaPelicula.reset();
+            location.reload();
+        } else {
+            alert("Error al agregar la película");
+        }
+    })
+})
