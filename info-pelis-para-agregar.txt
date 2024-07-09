@@ -1,0 +1,110 @@
+﻿#:{
+  "titulo": "",
+  "lanzamiento": ,
+  "genero": "",
+  "duracion": "",
+  "director": "",
+  "reparto": "",
+  "sinopsis": "",
+  "imagen": ""
+},
+
+--------------------------------------------------------------------
+
+
+0:{
+  "titulo": "Inside Out 2",
+  "lanzamiento": 2024,
+  "genero": "accion, aventura",
+  "duracion": "2h 33m",
+  "director": "Director",
+  "reparto": "Actores",
+  "sinopsis": "La sede mental del adolescente Riley está sufriendo una repentina demolición para dejar espacio a algo completamente inesperado: ¡nuevas emociones!",
+  "imagen": "Inside_Out_2.jpg"
+},
+
+1:{
+4:
+{
+  "titulo": "Bad Boys: Hasta la muerte",
+  "lanzamiento": 2024,
+  "genero": "acción, comedia",
+  "duracion": "1h 55m",
+  "director": "Adil El Arbi, Bilall Fallah",
+  "reparto": "Will Smith, Martin Lawrence, Vanessa Hudgens",
+  "sinopsis": "Después de que su difunto ex capitán es incriminado, Lowrey y Burnett intentan limpiar su nombre, solo para terminar huyendo ellos mismos.",
+  "imagen": "bad-boys-hasta-la-muerte.jpg"
+}
+
+5:
+{
+  "titulo": "Intensa-Mente",
+  "lanzamiento": 2015,
+  "genero": "animación, comedia, aventura",
+  "duracion": "1h 34m",
+  "director": "Pete Docter, Ronnie del Carmen",
+  "reparto": "Amy Poehler, Phyllis Smith, Richard Kind",
+  "sinopsis": "Cuando Riley, de 11 años, se muda a una nueva ciudad, sus Emociones se unen para ayudarla en la transición. La alegría, el miedo, la ira, el disgusto y la tristeza trabajan juntos, pero cuando la alegría y la tristeza se pierden, deben viajar a través de lugares desconocidos para regresar a casa.",
+  "imagen": "intensa-mente.jpg"
+}
+
+6:
+{
+  "titulo": "Under Paris",
+  "lanzamiento": 2024,
+  "genero": "acción, terror",
+  "duracion": "1h 41m",
+  "director": "Xavier Gens",
+  "reparto": "Berenice Bejo, Nassim Lyes",
+  "sinopsis": "Para salvar París de un baño de sangre internacional, una científica afligida se ve obligada a enfrentar su trágico pasado cuando un tiburón gigante aparece en el Sena.",
+  "imagen": "under-paris.jpg"
+}
+
+7:
+{
+  "titulo": "Godzilla y Kong: El Nuevo Imperio",
+  "lanzamiento": 2024,
+  "genero": "ficción, acción",
+  "duracion": "1h 55m",
+  "director": "Adam Wingard",
+  "reparto": "Dan Stevens, Rebecca Hall",
+  "sinopsis": "Después de su explosivo enfrentamiento, Godzilla y Kong deben reunirse contra una colosal amenaza no descubierta escondida dentro de nuestro mundo, desafiando su propia existencia y la nuestra.",
+  "imagen": "godzilla-y-kong-el-nuevo-imperio.jpg"
+}
+
+8:
+{
+  "titulo": "A Quiet Place: Day One",
+  "lanzamiento": 2024,
+  "genero": "terror",
+  "duracion": "1h 39m",
+  "director": "Michael Sarnoski",
+  "reparto": "Lupita Nyong'o, Joseph Quinn",
+  "sinopsis": "Mientras la ciudad de Nueva York es invadida por criaturas alienígenas que cazan mediante el sonido, una mujer llamada Sam lucha por sobrevivir.",
+  "imagen": "a-quiet-place-day-one.jpg"
+}
+
+9:
+{
+  "titulo": "Guerra civil",
+  "lanzamiento": 2024,
+  "genero": "acción, bélico, drama",
+  "duracion": "1h 49m",
+  "director": "Alex Garland",
+  "reparto": "Kirsten Dunst, Wagner Moura",
+  "sinopsis": "En un futuro cercano, un grupo de periodistas de guerra intenta sobrevivir mientras informan la verdad mientras Estados Unidos se encuentra al borde de una guerra civil.",
+  "imagen": "guerra-civil.jpg"
+}
+
+10:
+{
+  "titulo": "Kung Fu Panda 4",
+  "lanzamiento": 2024,
+  "genero": "acción, comedia, aventura",
+  "duracion": "1h 34m",
+  "director": "Mike Mitchell",
+  "reparto": "Jack Black, Awkwafina, Viola Davis",
+  "sinopsis": "Po se está preparando para convertirse en el líder espiritual de su Valle de la Paz, pero también necesita a alguien que ocupe su lugar como Guerrero Dragón. Como tal, entrenará a un nuevo practicante de kung fu para el lugar y se encontrará con un villano llamado Camaleón que evoca villanos del pasado.",
+  "imagen": "kung-fu-panda-4.jpg"
+}
+
