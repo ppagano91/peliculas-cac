@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const director = document.getElementById("director").value.trim();
         const reparto = document.getElementById("reparto").value.trim();
         const sinopsis = document.getElementById("sinopsis").value.trim();
-        const isValidRegistration = true;
+        let isValidRegistration = true;
 
         if (titulo=="" || titulo.length < 4){
             displayErrorMessage("tituloError", "El campo Título debe tener al menos 4 caracteres")
