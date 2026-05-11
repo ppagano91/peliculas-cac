@@ -2,5 +2,9 @@ Entrega:
     - Validación de Iniciar Sesión y Registro
     - Consuma de API (OPCIONAL)
 
-Ejemplo
-https://github.com/giselemilagros88/cac_movies_javaphp.git
+Ejemplo Proyecto Frontend
+    - https://github.com/giselemilagros88/cac_movies_javaphp.git
+
+Ejemplo Proyecto Backend
+- Java:     https://github.com/giselemilagros88/movies_java.git 
+- PHP:      https://github.com/giselemilagros88/movies_php.git
