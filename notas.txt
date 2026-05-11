@@ -1,0 +1,6 @@
+Entrega:
+    - Validación de Iniciar Sesión y Registro
+    - Consuma de API (OPCIONAL)
+
+Ejemplo
+https://github.com/giselemilagros88/cac_movies_javaphp.git
