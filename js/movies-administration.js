@@ -124,9 +124,7 @@ function validForm(submit=false) {
 
     if (isValidRegistration){
         if(submit){
-            alert('La película fue agregada exitosamente');
-            form.reset();
-            window.location.href = '../index.html';
+            return submit
         }
     }
 }
@@ -135,6 +133,8 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", (event) => {
         event.preventDefault();
         validForm(submit=true);
+        agregarPelicula();
+
     });
 
     formControls.forEach((input)=> {
@@ -216,34 +216,91 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", () => {listarPeliculas()});
 
-document.addEventListener("DOMContentLoaded", async () => {
-    console.log("POST")
+// document.addEventListener("DOMContentLoaded", async () => {
+//     formNuevaPelicula = document.getElementById("adminForm");
+
+//     formNuevaPelicula.addEventListener("submit", async (event) => {
+//         event.preventDefault();
+
+//         const formData = new FormData(formNuevaPelicula);
+
+//         const titulo = formData.get("titulo");
+//         const lanzamiento = formData.get("fechaLanzamiento");
+//         const genero = formData.get("genero");
+//         const duracion = formData.get("duracion");
+//         const director = formData.get("director");
+//         const reparto = formData.get("reparto");
+//         const sinposis = formData.get("sinposis");
+
+//         if ( titulo === "" || lanzamiento === "" || genero === "" || duracion === "" || director === "" || reparto === "" || sinposis === ""){
+//             alert("Todos los campos son obligatorios");
+//             return;
+//         }
+
+//         const nombreImagen = imagen.name;
+
+//         const options = {
+//             methid: "POST",
+//             headers: {
+//                 "Content-Type": "application/json",
+//             },
+//             body: JSON.stringify({
+//                 titulo: titulo,
+//                 lanzamiento: lanzamiento,
+//                 genero: genero,
+//                 duracion: duracion,
+//                 director: director,
+//                 reparto: reparto,
+//                 sinposis: sinposis
+//             })
+//         }
+
+//         const response = await fetch("http://localhost:8080/api/peliculas", options);
+
+//         const data = await response.json();
+//         console.log(data);
+
+//         if (response.status === 201){
+//             alert("Pelicula agregada correctamente");
+
+//             // formNuevaPelicula.reset();
+//             // location.reload();
+//         } else {
+//             alert("Error al agregar la película");
+//         }
+//     })
+// })
+
+const agregarPelicula = async () => {
     formNuevaPelicula = document.getElementById("adminForm");
+    console.log(formNuevaPelicula)
 
     formNuevaPelicula.addEventListener("submit", async (event) => {
         event.preventDefault();
 
         const formData = new FormData(formNuevaPelicula);
-
+        
         const titulo = formData.get("titulo");
         const lanzamiento = formData.get("fechaLanzamiento");
         const genero = formData.get("genero");
         const duracion = formData.get("duracion");
         const director = formData.get("director");
         const reparto = formData.get("reparto");
-        const sinposis = formData.get("sinposis");
+        const sinopsis = formData.get("sinopsis");
 
-        if ( titulo === "" || lanzamiento === "" || genero === "" || duracion === "" || director === "" || reparto === "" || sinposis === ""){
+        if ( titulo === "" || lanzamiento === "" || genero === "" || duracion === "" || director === "" || reparto === "" || sinopsis === ""){
             alert("Todos los campos son obligatorios");
             return;
         }
 
-        const nombreImagen = imagen.name;
+        const nombreImagen = imagen.value;
+        console.log(nombreImagen)
+
 
         const options = {
-            methid: "POST",
+            method: 'POST',
             headers: {
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify({
                 titulo: titulo,
@@ -251,22 +308,33 @@ document.addEventListener("DOMContentLoaded", async () => {
                 genero: genero,
                 duracion: duracion,
                 director: director,
-                reparto: reparto,
-                sinposis: sinposis
+                reparto:reparto,
+                sinopsis: sinopsis,
+                imagen: "imagen.jpg"
             })
-        }
-
+        };
+        console.log(JSON.stringify({
+            titulo: titulo,
+            lanzamiento: lanzamiento,
+            genero: genero,
+            duracion: duracion,
+            director: director,
+            reparto:reparto,
+            sinopsis: sinopsis,
+            imagen: "imagen.jpg"
+        }))
         const response = await fetch("http://localhost:8080/api/peliculas", options);
-
+        console.log(response)
         const data = await response.json();
+        console.log(data);
 
         if (response.status === 201){
             alert("Pelicula agregada correctamente");
 
-            formNuevaPelicula.reset();
-            location.reload();
+            // formNuevaPelicula.reset();
+            // location.reload();
         } else {
             alert("Error al agregar la película");
         }
     })
-})
+}
